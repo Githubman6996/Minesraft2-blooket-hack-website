@@ -1,5 +1,5 @@
 document.querySelector('.categories').innerHTML = "Loading cheats...";
-await fetch("https://raw.githubusercontent.com/Minesraft2/Blooket-Cheats/main/unobfuscated/Bookmarklets.html").then(async x => document.querySelector("#unobfuscated").contentDocument.write(await x.text().then(x => x.slice(0, x.indexOf("<style")))));
+await fetch("https://raw.githubusercontent.com/Githubman6996/Minesraft2-blooket-cheats-/main/Bookmarklets.html").then(async x => document.querySelector("#unobfuscated").contentDocument.write(await x.text().then(x => x.slice(0, x.indexOf("<style")))));
 const unobfuscated = parseCheats(document.querySelector("#unobfuscated"));
 window.a = unobfuscated
 
@@ -71,7 +71,3 @@ function parseDL(dl) {
         typeof value == "object" && Object.defineProperty(obj[key], "icon", { value: icon });
         return obj;
     }, {});
-
-    // parsed.Global && Object.defineProperty(parsed, "icon", { value: parsed.Global.icon });
-    return parsed;
-}
